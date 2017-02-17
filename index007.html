@@ -7,9 +7,12 @@
 	  <p id="demo">
 	  	我是改变前的内容
 	  </p>
+	  <button type=“button” onclick="myFunc()">点击覆盖当前内容</button>
 	  <script>
-				x=document.getElementById("demo");
-				x.innerHTML="我是改变后的内容";
+	  	function myFunc()
+	  	{
+			document.write("我将原来的内容覆盖了");
+		  }
 		</script>
 </body>
 </html>
