@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head> 
+<body>
+	  <script>
+	  	/*全局变量*/
+	  	var glb=3.1415926;
+	  	/*不带参的函数*/
+	    function myFunc1()
+	    {
+	    	alert("Hello World");
+	    }
+	    /*带参的函数*/
+	    function myFunc2(name)
+	    {
+	    	alert("Hello"+name);
+	    }
+	    /*具有返回值的函数*/
+	    function myFunc3(a,b)
+	    {
+	    	return a+b;
+	    }
+		</script>
+		<button type="button" onclick="myFunc1()">不带参的函数</button>
+		<button type="button" onclick="myFunc2('Hyman')">带参的函数</button>
+		<p id="demo">结果</p>
+		PI=<div id="pi">pi</div>
+		<script>
+			document.getElementById("demo").innerHTML=myFunc3(2,3);
+			document.getElementById("pi").innerHTML=glb;
+		</script>
+</body>
+    
+</html>
