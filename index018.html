@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="myFunction()">button1</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+  /*var cars=['dazhong','fengtian','bentian'];
+  for(i=0;i<cars.length;i++)
+  {
+  	document.write("<p>"+cars[i]+"</p>")
+  }*/
+  /*var cars={1:'dazhong',2:'fengtian'};
+  for(x in cars)
+  {
+  	document.write("<p>"+cars[x]+"</p>");
+  }*/
+  var cars=['dazhong','fengtian','bentian'];
+  var i=0;
+  /*while(cars[i])
+  {
+  	document.write("<p>"+cars[i]+"</p>");
+  	++i;
+  }*/
+  do
+  {
+  	document.write("<p>"+cars[i]+"</p>");
+  	++i;
+  }while(cars[i])
+  
+}
+</script>
+
+</body>
+</html>
