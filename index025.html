@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<p id="demo">Hello</p>
+	<button onclick="myFunc()">µã»÷</button>
+	<script>
+	function person(name,age)
+	{
+		this.name=name;
+		this.age=age;
+		
+		this.changeName=changeName;
+		function changeName(newName)
+		{
+			this.name=newName;
+		}
+	}
+	function myFunc()
+	{
+		try
+		{
+			 /*var person=new Object();
+	     person.name="hyman";
+	     person.age=18;*/
+	     //var person={name:"Hyman",age:"20"};
+	     var hyman=new person("hyman",30);
+	     hyman.changeName("liuzhihui");
+	     document.getElementById("demo").innerHTML=hyman.name+":"+hyman.age;
+	     for(x in hyman)
+	     {
+	     	 alert(hyman[x]);
+	     }
+	   
+	     
+		}
+		catch(err)
+		{
+			alert(err);
+		}
+	 
+	}
+	</script>
+</body>
+
+</html>
