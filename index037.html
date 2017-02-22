@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<script>
+  {
+	  function myFunc()
+	  {
+	  	alert("myFunc");
+	  }
+	  function myFunc1(txt)
+	  {
+	  	alert(txt);
+	  }
+	  function myfunc2(num)
+	  {
+	  	return num*10;
+	  }
+  }
+	</script>
+</body>
+  <button onclick="myFunc()">点击</button>
+  <button onclick="myFunc1('参数')">点击</button>
+  <script>
+    	document.write(myfunc2(3));
+    	for(i=0;i<5;i++)
+    	{
+    		document.write("数字是"+i+"<br>");
+    		document.write("<h"+i+">这是标题"+i);
+    		document.write("<h"+i+">")
+    	}
+    	var cars=new Array("宝马","奔驰","夏利");
+    	for(x in cars)
+    	{
+    		document.write(cars[x]+"<br/>")
+    	}
+    	
+    	try
+    	{
+    		alertt("错误");
+    	}
+    	catch(err)
+    	{
+    		alert(err);
+    		txt="本页中存在错误。\n\n"
+     txt+="点击“确定”继续查看本页，\n"
+     txt+="点击“取消”返回首页。\n\n"
+     if(!confirm(txt))
+         {
+         document.location.href="/index.html"
+         }
+    	}
+  </script>
+</html>
