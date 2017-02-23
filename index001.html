@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
- <script>
-  document.write("Hello World!")
- </script>
 <body>
- <script type="text/javascript">
-  document.write("Hello World!")
+ <p id="demo" name="he">Hello World</p>
+ <script>
+ 	  var demo=document.getElementById("demo");
+ 	  document.write("获取到的元素值是:"+demo.innerHTML);
+ 	  document.write('<br/>')
+ 	  document.write(demo.nodeName)
+ 	  document.write('<br/>')
+ 	  document.write(demo.firstChild.nodeValue)
+ 	  document.write('<br/>')
+ 	  document.write(demo.nodeValue)
+ 	  document.write('<br/>')
+ 	  document.write(demo.nodeType)
  </script>
- <br>
- <button type="button" onclick="alert('点击')">
- 	点击
-</button>
 </body>
 </html>
