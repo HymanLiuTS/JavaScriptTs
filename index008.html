@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyTitle</title>
+	</head>
+<body>
+	<script>
+		function createNewDoc()
+		{
+			var newDoc=document.open("text/new.html","replace");
+			var txt="<html><body>Hello World</body></html>";
+			newDoc.write(txt);
+			newDoc.close();
+		}
+	</script>
+		<button onclick="createNewDoc()">打开一个新文档</button>
+		<a name="first">第一个锚</a><br />
+		<a name="second">第二个锚</a><br />
+		<a name="third">第三个锚</a><br />
+		文档中锚的数目：
+		<script>
+			document.write(document.anchors.length)
+			document.write(document.anchors[0].innerHTML)
+		</script>
+		<form ></form>
+		<form ></form>
+		<form ></form>
+		<script>
+			document.write(document.forms.length)
+			document.write("<p>第一个表单名称:"+document.forms[0].name+"</p>");
+		</script>
+	  <p name="myName">我是一个段落</p>
+	  <input type="text" name="myName" value="我是一个输入框">
+	  <button type="button" name="myName">按钮</button>
+	  <script>
+	  	document.write(document.title);
+	  	document.write("<br>");
+	  	document.write(document.URL);
+	  	document.write("<br>");
+	  	document.write(document.referrer);
+	  	document.write("<br>");
+	  	document.write(document.domain);
+	  	var x=document.getElementsByName("myName");
+	  	alert(x.length);
+	  </script>
+</body>
+</html>
