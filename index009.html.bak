@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyTitle</title>
+	</head>
+<body onkeyup="whichElement(event)">
+	<script>
+		function whichBtn(event)
+		{
+			var btnNum = event.button;
+			if(btnNum==2)
+			{
+				alert("你点击了鼠标右键！")
+			}
+			else if(btnNum==0)
+			{
+				alert("你点击了鼠标左键！")
+			}
+			else if(btnNum==1)
+			{
+				alert("你点击了鼠标中键！")
+			}
+			else
+			{
+				alert("不清楚")
+			}
+		}
+		function showCoords(event)
+		{
+			x=event.clientX;
+			y=event.clientY;
+			alert("x:"+x+",y:"+y);
+		}
+		function whichButton(event)
+		{
+			alert(event.keyCode);
+		}
+		function showscreencoords(event)
+		{
+			x=event.screenX;
+			y=event.screenY;
+			alert("x:"+x+",y:"+y);
+		}
+		function isKeyPressed(event)
+		{
+			if(event.shiftKey==1)
+			{
+				alert("The shift key was pressed.")
+			}
+			else
+			{
+				alert("The shift key was not pressed.")
+			}
+		}
+		function whichElement(e)
+		{
+			var targ;
+			if(!e) var e=window.event;
+			if(e.target) targ=e.target;
+			else if(e.srcElement) targ=e.srcElement
+			if(targ.nodeType==3)
+			    targ=targ.parentNode
+			var tname
+			tname=targ.tagName
+			alert("You click on a"+tname+"element.")
+		}
+		function getEventType(event)
+  { 
+  alert(event.type);
+  }
+	</script>
+	<p onmousedown="whichBtn(event)">我是一个段落</p>
+	<p onmousedown="showCoords(event)">显示指针的X和Y坐标</p>
+  <p>获取键盘按键的Unicode码</p>
+  <p onmousedown="showscreencoords(event)">相对于屏幕的光标坐标</p>
+  <p>在文档中点击某个位置。消息框会告诉你是否按下了 shift 键。</p>
+</body>
+</html>
