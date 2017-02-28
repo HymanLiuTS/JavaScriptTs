@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyTitle</title>
+	<script>
+	function currLocation()
+	{
+		alert(window.location)
+	}
+	function newLocation()
+	{
+		window.location="index011.html";
+	}
+	function reloadPage()
+	{
+		window.location.reload();
+	}
+	function linkTo(y)
+	{
+		var x=window.open("index011.html","scrollbars=yes,width=250,height=200");
+		//x.location.hash=y;
+	}
+	</script>  	
+</head>
+<body onload="detectBrowser()">
+<input type="button" onclick="currLocation()" value="显示当前的URL">
+<input type="button" onclick="newLocation()" value="改变URL">
+<br/>
+<input type="button" value="重新加载页面" onclick="reloadPage()">
+<br/>
+<input type="button" value="0" onclick="linkTo(0)">
+<input type="button" value="1" onclick="linkTo(1)">
+<input type="button" value="2" onclick="linkTo(2)">
+<input type="button" value="3" onclick="linkTo(3)">
+<br/>
+<script>
+ var browser=navigator.appName;
+ var b_version=navigator.appVersion;
+ var version=parseFloat(b_version)
+ document.write("浏览器名称："+browser)
+ document.write("<br/>")
+ document.write("浏览器版本："+version)
+</script>
+
+<script type="text/javascript">
+document.write("<p>浏览器：")
+document.write(navigator.appName + "</p>")
+
+document.write("<p>浏览器版本：")
+document.write(navigator.appVersion + "</p>")
+
+document.write("<p>代码：")
+document.write(navigator.appCodeName + "</p>")
+
+document.write("<p>平台：")
+document.write(navigator.platform + "</p>")
+
+document.write("<p>Cookies 启用：")
+document.write(navigator.cookieEnabled + "</p>")
+
+document.write("<p>浏览器的用户代理报头：")
+document.write(navigator.userAgent + "</p>")
+</script>
+
+<script type="text/javascript">
+var x = navigator;
+document.write("CodeName=" + x.appCodeName);
+document.write("<br />");
+document.write("MinorVersion=" + x.appMinorVersion);
+document.write("<br />");
+document.write("Name=" + x.appName);
+document.write("<br />");
+document.write("Version=" + x.appVersion);
+document.write("<br />");
+document.write("CookieEnabled=" + x.cookieEnabled);
+document.write("<br />");
+document.write("CPUClass=" + x.cpuClass);
+document.write("<br />");
+document.write("OnLine=" + x.onLine);
+document.write("<br />");
+document.write("Platform=" + x.platform);
+document.write("<br />");
+document.write("UA=" + x.userAgent);
+document.write("<br />");
+document.write("BrowserLanguage=" + x.browserLanguage);
+document.write("<br />");
+document.write("SystemLanguage=" + x.systemLanguage);
+document.write("<br />");
+document.write("UserLanguage=" + x.userLanguage);
+</script>
+<script>
+  function detectBrowser()
+  {
+  	var browser=navigator.appName;
+  	var b_version=navigator.appVersion;
+  	var version=parseFloat(b_version)
+  	if((browser=="Netscape"||browser=="Microsoft Internet Explorer")&&(version>4))
+  	{
+  		alert("你的浏览器已经很棒了");
+  	}
+  	else
+  	{
+  		alert("你的浏览器需要升级了")
+  	}
+  }
+</script>
+</body>
+</html>
