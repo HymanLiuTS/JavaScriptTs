@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyTitle</title>
+	<script>
+		function breakout()
+		{
+			//if(window.top!=window.self)
+			{
+				window.top.location="index009.html"
+			}
+		}
+		function changeSource()
+		{
+			document.getElementById("frame1").src="index003.html";
+			document.getElementById("frame2").src="index004.html";
+		}
+		function changeSize()
+		{
+			document.getElementById("compman").height="270";
+			document.getElementById("compman").width="164";
+		}
+		function changeSrc()
+		{
+			document.getElementById("compman").src="image/2.jpg";
+		}
+	</script>  	
+	</script>
+</head>
+<body>
+<input type="button" onclick="breakout()" value="跳出框架！">
+<iframe src="index001.html" id="frame1"></iframe>
+<iframe src="index002.html" id="frame2"></iframe>
+<input type="button" onclick="changeSource()" value="改变源">
+
+<img id="compman" src="image/1.jpg"/>
+<input type="button" onclick="changeSize()" value="改变图像的高度和宽度">
+<input type="button" onclick="changeSrc()" value="改变图像的源">
+</body>
+</html>
