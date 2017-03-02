@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyTitle</title>
+</head>
+<body>
+<script>
+	function enable()
+	{
+		document.getElementById("mySelect").disabled=false;
+	}
+	function disable()
+	{
+		document.getElementById("mySelect").disabled=true;
+	}
+	function getLength()
+	{
+		alert(document.getElementById("mySelect").length)
+	}
+	function changeLength()
+	{
+		document.getElementById("mySelect").size=4;
+	}
+	function selectMutil()
+	{
+		document.getElementById("mySelect").multiple=true;
+	}
+	function getAllOptions()
+	{
+		var x=document.getElementById("mySelect");
+		var y="";
+		for(i=0;i<x.length;i++)
+		{
+			y+=x.options[i].text;
+			y+="<br/>"
+		}
+		alert(y);
+	}
+	function alertIndex()
+	{
+		var x=document.getElementById("mySelect").selectedIndex;
+		var y=document.getElementsByTagName("option");
+		alert(y[x].text + "has the index of:" + y[x].index);
+	}
+	function selectPutao()
+	{
+		document.getElementById("putao").selected=true;
+	}
+	function removeOption()
+	{
+		var x=document.getElementById("mySelect");
+		x.remove(x.selectedIndex);
+	}
+</script>
+<form id="myForm">
+	<select id="mySelect">
+		<option id="apple">苹果</option>
+		<option id="putao">葡萄</option>
+	</select>
+	<br><br>
+	<input type="button" onclick="enable()" value="启用">
+	<input type="button" onclick="disable()" value="禁用">
+	<br><br>
+	<input type="button" onclick="getLength()" value="在这个列表中，有多少选项？">
+	<br><br>
+	<input type="button" onclick="changeLength()" value="改变大小">
+	<br><br>
+	<input type="button" onclick="selectMutil()" value="选择多个">
+	<br><br>
+	<input type="button" onclick="getAllOptions()" value="输出所有选项">
+	<br><br>
+	<input type="button" onclick="alertIndex()" value="找到所选项索引">
+	<br><br>
+	<input type="button" onclick="selectPutao()" value="选中葡萄">
+	<br><br>
+	<input type="button" onclick="selectPutao()" value="删除所选项">
+</form>
+<p>该表单的id是：
+<script>
+	document.write(document.getElementById("mySelect").form.id)
+</script>
+<script type="text/javascript">
+document.write("Screen resolution: ")
+document.write(screen.width + "*" + screen.height)
+document.write("<br />")
+document.write("Available view area: ")
+document.write(screen.availWidth + "*" + screen.availHeight)
+document.write("<br />")
+document.write("Color depth: ")
+document.write(screen.colorDepth)
+document.write("<br />")
+document.write("Buffer depth: ")
+document.write(screen.bufferDepth)
+document.write("<br />")
+document.write("DeviceXDPI: ")
+document.write(screen.deviceXDPI)
+document.write("<br />")
+document.write("DeviceYDPI: ")
+document.write(screen.deviceYDPI)
+document.write("<br />")
+document.write("LogicalXDPI: ")
+document.write(screen.logicalXDPI)
+document.write("<br />")
+document.write("LogicalYDPI: ")
+document.write(screen.logicalYDPI)
+document.write("<br />")
+document.write("FontSmoothingEnabled: ")
+document.write(screen.fontSmoothingEnabled)
+document.write("<br />")
+document.write("PixelDepth: ")
+document.write(screen.pixelDepth)
+document.write("<br />")
+document.write("UpdateInterval: ")
+document.write(screen.updateInterval)
+document.write("<br />")
+</script>
+</p>
+</body>
+</html>
