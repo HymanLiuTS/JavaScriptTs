@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#bt").click(function(){
+			 $("#tg").animate({left:'300px'});
+			});
+		});
+	$(document).ready(function(){
+		$("#bt1").click(function(){
+			$("#tg").animate(
+			{
+				left:'300px',
+				width:'+=200px',
+				height:'+=200px',
+				opacity:'0.5',
+				 paddingLeft:'20'
+			}
+			);
+			});
+		});	
+</script>
+<script>
+	$(document).ready(function(){
+		$("#bt2").click(function(){
+			$("#tg").animate({
+	     width:'+=120px',
+	     height:'+=120px'
+		   });
+			});
+		});
+</script>
+<script>
+	$(document).ready(function(){
+		$("#bt3").click(function(){
+			$("#tg").animate({
+				width:'toggle'
+				});
+			});
+		});
+</script>
+<script>
+	$(document).ready(function(){
+		$("#bt4").click(function(){
+			$("#tg").animate({left:'300'});
+			$("#tg").animate({top:'300'});
+			$("#tg").animate({left:'0'});
+		$("#tg").animate({top:'0'});
+			});
+		});
+</script>
+<script>
+	$(document).ready(function(){
+		$("#bt5").click(function(){
+			var div=$("#tg");
+			div.animate({left:'200px'});
+			div.animate({fontSize:'3em'});
+			});
+		});
+</script>
+</head>
+<body>
+	<button id="bt">点击移动</button>
+	<br><br>
+	<button id="bt1">点击移动变大</button>
+	<br><br>
+	<button id="bt2">点击改变元素的当前值</button>
+	<br><br>
+	<button id="bt3">点击隐藏或显示区域</button>
+	<br><br>
+	<button id="bt4">点击执行动画队列</button>
+	<br><br>
+	<button id="bt5">点击改变字体大小</button>
+	<br><br>
+	<div id="tg" style="background-color:green;width:100px;height:100px;;position:absolute;">
+		hello
+	</div>
+</body>
+</html>
