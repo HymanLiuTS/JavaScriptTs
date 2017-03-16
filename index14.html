@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery.min.js"></script>
+<style>
+.important
+{
+font-weight:bold;
+font-size:xx-large;
+}
+.blue
+{
+color:blue;
+}
+
+</style>
+<script>
+	$(document).ready(function(){
+		$("#btn1").click(function(){
+			  var hg=$("#div1").height();
+			  var wd=$("#div1").width();
+			  var txt=hg+":"+wd;
+			  $("p").text(txt);
+			});
+		$("#btn2").click(function(){
+			  var hg=$("#div1").innerHeight();
+			  var wd=$("#div1").innerWidth();
+			  var txt=hg+":"+wd;
+			  $("p").text(txt);
+			});
+		$("#btn3").click(function(){
+			  var hg=$("#div1").outerHeight();
+			  var wd=$("#div1").outerWidth();
+			  var txt=hg+":"+wd;
+			  $("p").text(txt);
+			});
+		$("#btn4").click(function(){
+			  var hg=$("#div1").outerHeight(true);
+			  var wd=$("#div1").outerWidth(true);
+			  var txt=hg+":"+wd;
+			  $("p").text(txt);
+			});
+			$("#btn5").click(function(){
+			  var hg=$(document).height();
+			  var wd=$(document).width();
+			  var txt=hg+":"+wd;
+			  $("p").text(txt);
+			});
+			$("#btn6").click(function(){
+			  var hg=$(window).innerHeight();
+			  var wd=$(window).innerWidth();
+			  var txt=hg+":"+wd;
+			  $("p").text(txt);
+			});
+			$("#btn7").click(function(){
+			  var hg=$("#div1").height("400");
+			  var wd=$("#div1").width("300");
+			  var txt=hg+":"+wd;
+			  $("p").text(txt);
+			});
+		});
+</script>
+</head>
+<body>
+	<div>
+		<p>我是P元素</p>
+		<div id="div1" style="padding-top:5px;margin-top:10px;border:2px solid blue;">
+		 <p>haha</p>
+		 <div>
+			 <p>Haha</p>
+		 </div>
+		</div>
+	</div>
+	
+	<button id="btn1">点击获取height和width</button>
+	<button id="btn2">点击获取innerHeight和innerWidth</button>
+	<button id="btn3">点击获取不包含外边距的outerHeight和outerWidth</button>
+	<button id="btn4">点击获取包含外边距的outerHeight和outerWidth</button>
+	<button id="btn5">点击获取浏览器的height和width</button>
+	<button id="btn6">点击获取窗口的height和width</button>
+	<button id="btn7">设置容器的长和宽</button>
+</body>
+</html>
