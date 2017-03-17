@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery.min.js"></script>
+<style>
+  .ancestors *{
+  	display:block;
+  	border:solid 2px lightgrey;
+  	color:lightgrey;
+    padding:15px;
+    margin:10px;
+  	}
+</style>
+<script>
+	$(document).ready(function(){
+		$("#btn1").click(function(){
+			//$(".ancestors").siblings().css({"border":"solid 2px red"});
+			//$(".ancestors").next().css({"border":"solid 2px red"});
+			//$(".ancestors").nextAll().css({"border":"solid 2px red"});
+			//$(".ancestors").nextUntil("#div1").css({"border":"solid 2px red"});
+			$(".ancestors").prev().css({"border":"solid 2px red"});
+			});
+		});
+</script>
+</head>
+<body>
+		<div> 祖先
+			<h2>我是标题</h2>
+			<p>我是一个段落</p>
+			<p>我是另一个段落</p>
+			<div  class="ancestors" style="width:500px;">div 曾祖父
+				<ul>ul 
+					<li> li 父类
+						<span>span</span>
+					</li>
+				</ul>
+			</div>
+			<h6>我是小标题</h6>
+			<div id="div1">我是div</div>
+			<a>我是一个锚<a/>
+		</div>
+		<button id="btn1">点击改变所有的siblings元素</button>
+</body>
+</html>
