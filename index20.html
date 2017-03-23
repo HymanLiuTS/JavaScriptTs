@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<script src="js/jquery.min.js"></script>
+<script>
+ $(document).ready(function(){
+ 	$('#btn1').click(function(){
+ 		$(this).hide();
+ 		});
+ 	$("#btn2").click(function(){
+ 		$("p").hide();
+ 		});
+ 	$("#btn4").click(function(){
+ 		$(".ex").slideToggle("slow")
+ 		});
+ 	$("#btn3").click(function(){
+ 		$("#div1").fadeOut();
+ 		$("#div2").fadeOut("slow");
+ 		$("#div3").fadeOut(3000);
+ 		});
+ 	$("#btn5").click(function(){
+ 		$("#div4").animate({height:'300px',opacity:'0.8'},'slow');
+ 		$("#div4").animate({width:'300px',opacity:'0.4'},'slow');
+ 		$("#div4").animate({height:'100px',opacity:'0.2'},'slow');
+ 		$("#div4").animate({width:'100px',opacity:'1.0'},'slow');
+ 		});
+ 	});
+ 	$(document).ready(function(){
+  $(".ex .hide").click(function(){
+    $(this).parents(".ex").hide("slow");
+  });
+});
+</script>
+<style type="text/css"> 
+div.ex
+{
+background-color:#e5eecc;
+padding:7px;
+border:solid 1px #c3c3c3;
+}
+</style>
+</head>
+<body>
+<p>我是一个段落</p>
+<p>我是另一个段落</p>
+<button id="btn1">隐藏自己</button>
+<button id="btn2">隐藏p元素</button>
+<button id="btn3">fadeout div</button>
+<div id="div1" style="width:200px;height:200px;background-color:red;"></div>
+<div id="div2" style="width:200px;height:200px;background-color:green;"></div>
+<div id="div3" style="width:200px;height:200px;background-color:blue;"></div>
+
+<h3>中国办事处</h3>
+<div class="ex">
+<button class="hide" type="button">隐藏</button>
+<p>联系人：张先生<br /> 
+北三环中路 100 号<br />
+北京</p>
+</div>
+
+<h3>美国办事处</h3>
+<div class="ex">
+<button class="hide" type="button">隐藏</button>
+<p>联系人：David<br /> 
+第五大街 200 号<br />
+纽约</p>
+</div>
+<button id="btn4">点击slideToggle</button>
+<br><br>
+<div id="div4" style="width:100px;height:100px;background-color:green;">
+</div>
+<br><br>
+<button id="btn5">开始动画</button>
+</body>
+</html>
