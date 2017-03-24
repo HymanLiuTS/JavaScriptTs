@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+function loadDoc()
+{
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+       xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+      {
+        document.getElementById("content").innerHTML=xmlhttp.responseText;
+      }
+    }
+    xmlhttp.open("GET","/static/1.txt",true);
+    xmlhttp.send();
+}
+function loadXML()
+{
+	 var xmlhttp;
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+       xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+      {
+
+      	xmlDoc=xmlhttp.responseXML;
+      	txt="";
+      	x=xmlDoc.getElementsByTagName('title');
+      	alert(''+x[0]);
+      	for(i=0;i<x.length;i++)
+      	{
+      		
+      		txt=txt+x[i].childNodes[0].nodeValue+"<br/>";
+      	}
+        document.getElementById("content").innerHTML=txt;
+      }
+    }
+    xmlhttp.open("GET","/static/1.xml",true);
+    xmlhttp.send();
+}
+</script>	 
+</head>
+<body>
+ <h2>Ajax</h2>
+<button onclick="loadDoc()">点击加载文本</button>
+<button onclick="loadXML()">点击加载XML</button>
+<div id="content">
+</div>
+</body>
+</html>
+ 
