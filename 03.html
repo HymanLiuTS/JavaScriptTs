@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+function loadDoc(str)
+{
+	
+	if(str.length==0)
+	{
+		document.getElementById('content').innerHTML="";
+		return;
+	}
+  var xmlhttp;
+  if(window.XMLHttpRequest)
+  {
+  	xmlhttp=new XMLHttpRequest();
+  }
+  else
+  {
+  	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function()
+  {
+  	
+  	if (xmlhttp.readyState==4&&xmlhttp.status==200)
+  	{
+  		document.getElementById("content").innerHTML=xmlhttp.responseText;
+  	}
+  }
+  xmlhttp.open('GET','http://www.codenest.cn/post/'+str,true);
+  xmlhttp.send();
+}
+</script>	 
+</head>
+<body>
+<form>
+文章ID：<input name="q" onkeyup="loadDoc(this.value)">
+</form>
+<div id="content">
+</div>
+</body>
+</html>
+ 
