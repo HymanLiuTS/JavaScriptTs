@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<span id="name"></span><br>
+<span id="age"></span>
+<script>
+  var jsonObj={
+  	"name":"Hyman",
+  	"age":30
+  	};	
+  document.getElementById("name").innerHTML=jsonObj.name;
+  document.getElementById("age").innerHTML=jsonObj.age;
+</script>
+<h2>通过Json字符串来创建对象</h2>
+<p id="lname"></p>
+<script>
+	var jsonObj=[
+	{"lname":"Hyman","fname":"Liu"},
+	{"lname":"James","fname":"wang"}
+	]
+	jsonObj[0].lname="zhihui";
+	document.getElementById("lname").innerHTML=jsonObj[0].lname;
+</script>
+<h2>通过Json字符串来创建对象</h2>
+<p id="fname1"></p>
+<p id="lname1"></p>
+<script>
+	var txt = '{"employees":[' +
+'{"firstName":"Bill","lastName":"Gates" },' +
+'{"firstName":"George","lastName":"Bush" },' +
+'{"firstName":"Thomas","lastName":"Carter" }]}';
+
+//var obj = eval ("(" + txt + ")");
+var obj = JSON.parse(txt);
+document.getElementById("lname1").innerHTML=jsonObj[0].lname;
+document.getElementById("fname1").innerHTML=jsonObj[0].fname;
+</script>
+</body>
+</html>
+ 
