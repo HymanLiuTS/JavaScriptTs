@@ -2,69 +2,32 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script>
-	
-	function loadDocAsyncTrue()
-	{
-		var xmlhttp;
-		if(window.XMLHttpRequest)
-		{
-			xmlhttp=new XMLHttpRequest();
-		}
-		else
-		{
-			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		//设置async=True，异步方式加载，此时要求服务端是可响应状态，否则出现加载过来的数据还没完成就被用户调转了别的界面
-		xmlhttp.onreadystatechange=function()
-		{
-			if(xmlhttp.readyState==4 && xmlhttp.status==200)
-			{
-				document.getElementById("content").innerHTML=xmlhttp.responseText;
-			}
-		}
-		//获取服务器上的静态资源
-		//xmlhttp.open("GET","/static/1.html",true);
-		
-		//获取带查询条件的url
-		//xmlhttp.open("GET","/?page=2",true);
-		
-		//GET传递信息
-		//xmlhttp.open("GET","/auth/login?name=879651072",true)
-		
-		//POST获取信息
-		xmlhttp.open("POST","/",true)
-		
-		//POST传递表单
-		xmlhttp.open("POST","/auth/login",true)
-		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-		xmlhttp.send("email=879651072@qq.com&password=123");
-	}
-	
-	//设置async=false，为同步加载，加载过程中当前页面处于被锁定的状态，直到加载完成。
-	function loadDocAsyncFalse()
-	{
-		var xmlhttp;
-		if(window.XMLHttpRequest)
-		{
-			xmlhttp=new XMLHttpRequest();
-		}
-		else
-		{
-			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		xmlhttp.open('GET','/',false);
-		xmlhttp.send();
-		document.getElementById("content").innerHTML=xmlhttp.responseText;
-	}
-</script>	 
+<style>
+  li strong{
+  	font-style:italic;
+  	font-weight:normal;
+  }	
+  strong{
+  	color:red
+  	}
+  h2{
+  	color:red
+  	}
+  h2 strong{
+  	color:blue
+  	}
+</style>
 </head>
 <body>
- <h2>Ajax</h2>
-<button onclick="loadDocAsyncTrue()">点击异步加载内容</button>
-<button onclick="loadDocAsyncFalse()">点击同步加载内容</button>
-<div id="content">
-</div>
+	<p><strong>我是普通的加粗</strong></p>
+	<ol>
+		<li><strong>我是在列表中的加粗</strong></li>
+		<li>我是列表中普通的一行</li>
+	</ol>
+	
+	<p>The strongly emphasized word in this paragraph is<strong> red</strong>.</p>
+  <h2>This subhead is also red.</h2>
+  <h2>The strongly emphasized word in this subhead is<strong> blue</strong>.</h2>
 </body>
 </html>
  
