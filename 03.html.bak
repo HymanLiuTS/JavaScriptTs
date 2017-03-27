@@ -31,6 +31,7 @@ function loadDoc(str)
   		document.getElementById("header").innerHTML=xmlhttp.getAllResponseHeaders();
   		//获取所有响应的内容
   		document.getElementById("content").innerHTML=xmlhttp.responseText;
+  		
   	}
   }
   xmlhttp.open('GET','/post/'+str,true);
