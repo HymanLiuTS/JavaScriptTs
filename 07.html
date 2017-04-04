@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+<script>
+	localStorage.lastname="Hyman";
+	document.write(localStorage.lastname);
+</script>
+<script>
+	if(localStorage.pagecount)
+	{
+		localStorage.pagecount=Number(localStorage.pagecount)+1;
+	}
+	else
+	{
+	  localStorage.pagecount=1;	
+	}
+	document.write(localStorage.pagecount);
+</script>
+<script>
+	sessionStorage.first="Liu";
+	document.write(sessionStorage.first);
+</script>
+<script>
+	if(sessionStorage.pageCount)
+	  sessionStorage.pageCount=Number(sessionStorage.pageCount)+1;
+	else
+		sessionStorage.pageCount=1;
+	document.write(sessionStorage.pageCount);
+</script>
+</body>
+</html>
