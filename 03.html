@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+  div#div1
+  { 
+  	background:url(img/bg_flower.gif),url(img/border.png);
+    background-size:63px 100px;
+    -moz-background-size:63px 100px; /* 老版本的 Firefox */
+    background-repeat:no-repeat;
+    padding-top:80px;
+  }
+  div#div2
+  { 
+  	background:url(img/bg_flower.gif);
+    background-size:40% 100%;
+    -moz-background-size:40% 100%; /* 老版本的 Firefox */
+    background-repeat:no-repeat;
+  }
+  div#div4
+  {
+  	background-color:yellow;
+  	margin:30px;
+  	padding:20px;
+  	background:url(img/bg_flower.gif);
+  	background-origin:border-box;
+  }
+</style>
+</head>
+<body>
+	<img src="img/bg_flower.gif"/>
+	<p>上面是原图</p>
+	<div id="div1"><div>
+  <p>上面是缩小的背景图片。</p>
+  <div id="div2">
+  <p>这是一个段落</p>	
+  <p>这是一个段落</p>	
+  <p>这是一个段落</p>	
+  <p>这是一个段落</p>	
+  <p>这是一个段落</p>	
+  <p>这是一个段落</p>	
+  <p>这是一个段落</p>	
+  <p>这是一个段落</p>	
+  <div>
+  <p>上面是拉伸的背景图片。</p>
+  <div id="div3">
+  	这是一个块
+  	<div id="div4">
+  	  	<div>
+  	  		<p>这是一个段落。</p>
+  	  		<p>这是一个段落。</p>
+  	  		<p>这是一个段落。</p>
+  	  		<p>这是一个段落。</p>
+  	  		<p>这是一个段落。</p>
+  	  		<p>这是一个段落。</p>
+  	  		<p>这是一个段落。</p>
+  	  	</div>
+  	<div>
+  </div>
+</body>
+</html>
