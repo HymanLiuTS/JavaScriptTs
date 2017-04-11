@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+  div#div1{
+  	border:solid 2px;
+  	width:200px;
+  	resize:both;
+  	overflow:auto;
+  	box-sizing:border-box;
+		-moz-box-sizing:border-box; /* Firefox */
+		-webkit-box-sizing:border-box; /* Safari */
+  	}
+  div.div2{
+  	box-sizing:border-box;
+		-moz-box-sizing:border-box; /* Firefox */
+		-webkit-box-sizing:border-box; /* Safari */
+  	border:solid red 1px;
+  	width:50;
+  	float:left;
+  	}
+  	
+  div#div3{
+  	border:2px solid black;
+  	outline:2px solid red;
+  	outline-offset:15px;
+  	}
+</style>
+</head>
+<body>
+	<div id="div1">我是一个Div
+		<div class="div2">我是左半部分</div>
+		<div class="div2">我是右半部分</div>
+	</div>
+	<div id="div3">
+		我具有边框
+	</div>
+</body>
+</html>
